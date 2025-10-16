@@ -1,0 +1,21 @@
+function toSnakeCase(text) {
+    return text
+        .replace(/([a-z])([A-Z])/g, '$1_$2') // handle camelCase
+        .replace(/[\s\-]+/g, '_')            // spaces and hyphens to underscores
+        .replace(/[^a-zA-Z0-9_]/g, '')       // remove non-alphanumeric except underscore
+        .toLowerCase();
+}
+
+function addNumbers(a, b) {
+    return a + b;
+}
+
+function addNumbers(a, b) {
+    if (a === undefined || b === undefined || a === null || b === null) {
+        throw new Error('Both inputs must be defined and not null.');
+    }
+    if (typeof a !== 'number' || typeof b !== 'number' || isNaN(a) || isNaN(b)) {
+        throw new Error('Both inputs must be valid numbers.');
+    }
+    return a + b;
+}
